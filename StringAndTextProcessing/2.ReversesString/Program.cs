@@ -3,25 +3,19 @@
 
 
 using System;
+using System.Text;
 class Program
     {
         static void Main()
         {
             string str = Console.ReadLine();
-            int length = str.Length;
-            //string is read only, we can't affect it, so we need onother var
-            char[] reversedStr = new Char[length];
-            for (int i = 0; i < length; i++)
+            StringBuilder sb = new StringBuilder();
+            for (int i = str.Length - 1; i >= 0; i--)
             {
-                reversedStr[i] = str[length-i-1];
+                sb.Append(str[i]);
             }
-            //printing the reversed char array
-
-            for (int i = 0; i < length; i++)
-            {
-                Console.Write(reversedStr[i]);
-            }
-            Console.WriteLine();
+            Console.WriteLine(sb.ToString());
+            Console.ReadLine();
         }
     }
 
