@@ -9,9 +9,7 @@ class Program
     {
         static void Main()
         {
-            string text = Console.ReadLine();
-            StringBuilder tempText = new StringBuilder();
-            tempText.Append(text.ToString());
+            StringBuilder tempText = new StringBuilder(Console.ReadLine());
             //i'm using stringbuilder append, we can olso do it with padRight(text, '*')
             if (text.Length < 20 )
                 for (int i = text.Length; i < 20; i++)
